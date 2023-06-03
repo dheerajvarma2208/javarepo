@@ -1,18 +1,24 @@
 package com.example.oops;
 
 public class Vehicle {
-    public static void main(String[] args) {
-        Vehicle car = new Vehicle();
-        car.start();
-        car.stop();
+    private String make;
+    private String model;
+
+    public Vehicle() {
     }
 
-    private void start() {
-        System.out.println("vehicle started ");
+    public Vehicle(String make, String model) {
+        this.make = make;
+        this.model = model;
+    }
+
+    public void start() {
+        System.out.println("vehicle started " + make);
         System.out.println("vehicle stopped with changes  ");
     }
 
-    private void stop() {
-        System.out.println("vehicle stopped with changes ");
+    public void stop() {
+        System.out.println("vehicle stopped with changes "+model);
     }
+
 }
